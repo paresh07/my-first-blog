@@ -9,7 +9,12 @@
     </head>
     <body>
     <div class="page-header">
+        {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+        <!--we want to call our new view post_new. The class "glyphicon glyphicon-plus" is provided by the bootstrap theme-->
         <h1><a href="/">Piush Django Blog</a></h1>
+
     </div>
         <div class="content container">
         <div class="row">
